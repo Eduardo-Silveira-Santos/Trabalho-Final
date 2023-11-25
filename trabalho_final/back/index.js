@@ -90,11 +90,13 @@ app.get("/login/:usuario/:senha", async (request, response) => {
         if(usuario !== 'admin'){
             const results = await db.login(usuario, senha);
             response.json(results);
+            return;
         } else {
             if(senha === 'admin') {
                 response.json({
                     nome: 'admin',
                 });
+                return;
             }
         }
     
