@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Anime Figures Store</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logo da Anime Figures Store">
+        <h1>Anime Figures Store</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="produtos">Produtos</a>
+        <a href="usuarios" id="link-usuario">Usuário</a>
+        <a href="carrinho">Carrinho</a>
+    </nav>
+    <br><br>
+    <main>
+        <section>
+            <h1>Suas Informações</h1>
+            <br>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th id="nome"></th>
+                        </tr>
+                        <tr>
+                            <th>Rua</th>
+                            <th id="rua"></th>
+                        </tr>
+                        <tr>
+                            <th>Nº da Residencia</th>
+                            <th id="numero"></th>
+                        </tr>
+                        <tr>
+                            <th>Complemento</th>
+                            <th id="complemento"></th>
+                        </tr>
+                        <tr>
+                            <th>Bairro</th>
+                            <th id="bairro"></th>
+                        </tr>
+                        <tr>
+                            <th>Cidade</th>
+                            <th id="cidade"></th>
+                        </tr>
+                        <tr>
+                            <th>UF</th>
+                            <th id="uf"></th>
+                        </tr>
+                        <tr>
+                            <th>CEP</th>
+                            <th id="cep"></th>
+                        </tr>
+                    </thead>
+                </table>
+                <button class="button" id="atualizarBotao" type="button"><a href="usuarioPatch">Atualizar Informações</a></button>
+                <br><br>
+                <button class="button" onclick="" type="submit"><a href="pedidos">Consultar Pedidos</a></button>
+                <br><br>
+                <button class="button" onclick="onClickSair()" type="button">Sair</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./scripts/usuarios.js"></script>
+</html>

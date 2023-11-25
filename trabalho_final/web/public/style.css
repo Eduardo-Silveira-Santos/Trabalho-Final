@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Padrão */
+    --branco: #ffffff;
+    --preto: #000000;
+    /* Principais */
+    --fundo: #1E2B39;
+    --headerFooter: #131313;
+    --nav: #161616;
+    --divs: #001f2b;
+    --principal: #024059;
+    /* Fontes */
+    --fonte: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-padrao: 'Bebas Neue', sans-serif;
+    /* Outros */
+}
+
+/* CSS padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao);
+    color: var(--branco);
+}
+
+/* Configurações do corpo padrão */
+body {
+    background-color: var(--fundo);
+    background-image: url(imagens/back2.png);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: var(--headerFooter);
+    background-image: url(imagens/back1.png);
+}
+
+/* Cabeçalho config. padrão */
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+/* Logo config. */
+header img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: auto;
+}
+
+/* Nav config. padrão */
+nav {
+    background-color: var(--nav);
+    background-image: url(imagens/back2.png);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 103px;
+    z-index: 999;
+    font-size: 20px;
+}
+
+/* Nav links config. */
+nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Nav hover config. */
+nav a:hover, nav a:active {
+    background-color: var(--principal);
+    background-image: url(imagens/back2.png);
+}
+
+/* Main config. padrão */
+main {
+    margin-top: 110px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Footer config. pradrão */
+footer {
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Div config. padrão */
+div {
+    background-color: var(--divs);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+/* Config. da class button */
+.button {
+    width: 200px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Config. dos links na class button */
+.button a {
+    text-decoration: none;
+}
+
+/* Config. do hover */
+.button:hover {
+    transform: scale(1.1);
+}
+
+/* Button config. padrão */
+button {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--principal);
+    background-image: url(imagens/back1.png);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+/* Before config. */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 48%, var(--branco) 48%, var(--branco) 52%, transparent 52%);
+    background-size: 200% 200%;
+    z-index: -1;
+    transition: background-position 0.3s ease;
+
+}
+
+/* Config. da posição do button */
+button:hover::before {
+    background-position: 100% 100%;
+}
+
+/* Form config. padrão */
+form {
+    background-color: var(--divs);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Label config. padrão */
+label {
+    display: block;
+    color: var(--principal);
+    margin-bottom: 10px;
+}
+
+/* Input config. padrão */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--branco);
+    color: var(--preto);
+    font-size: 18px;
+}
+
+/* Table config. padrão */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Table head config. padrão */
+thead th {
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+/* Table data config. padrão */
+td {
+    background-color: var(--branco);
+    color: var(--preto);
+    border: 1px solid #ccc;
+}
+
+/* Table row config. padrão */
+tr {
+    color: var(--preto);
+}
+
+/* Table body data config. padrão */
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Table input config. padrão */
+table input {
+    width: calc(100% - 20px);
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.img-produto {
+    max-width: 300px;
+}
+
+.destaques {
+    display: flex;
+    max-width: 1000px;
+    background-color: transparent;
+    gap: 15px;
+}
+
+#modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    z-index: 9999;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#modal > div {
+    width: 800px;
+    max-height: 600px;
+    overflow: auto;
+}
+
+#login, #cadastro {
+    display: none;
+}

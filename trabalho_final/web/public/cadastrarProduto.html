@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Figures Store</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logo da Anime Figures Store">
+        <h1>Anime Figures Store</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="produtos">Produtos</a>
+        <a href="usuarios" id="link-usuario">Usuário</a>
+        <a href="carrinho">Carrinho</a>
+    </nav>
+    <br><br>
+    <main>
+        <h1>Cadastrar Produto</h1>
+        <br>
+        <div>
+            <form action="" id="cadastroForm">
+                <label for="cadastrarDescricao"></label>
+                <input type="text" name="descricao" id="cadastrarDescricao" placeholder="Descrição">
+                <br>
+                <label for="cadastrarPreco"></label>
+                <input type="text" name="preco" id="cadastrarPreco" placeholder="Preço">
+                <br>
+                <label for="cadastrarImagem"></label>
+                <input type="text" name="imagem" id="cadastrarImagem" placeholder="Imagem">
+                <br><br>
+                <button class="button" type="submit">Criar Conta</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Anime Figures Store. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="./scripts/cadastrarProduto.js"></script>
+</html>

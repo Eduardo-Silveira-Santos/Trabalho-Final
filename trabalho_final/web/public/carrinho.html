@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Anime Figures Store</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logo da Anime Figures Store">
+        <h1>Anime Figures Store</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="produtos">Produtos</a>
+        <a href="usuarios" id="link-usuario">Usuário</a>
+        <a href="carrinho">Carrinho</a>
+    </nav>
+    <br><br>
+    <main>
+        <section>
+            <h1>Carrinho</h1>
+            <br>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Conteúdo da tabela será preenchido dinamicamente -->
+                    </tbody>
+                </table>
+                <table>
+                    <tfoot>
+                        <tr>
+                            <td>Valor final</td>
+                            <td id="valorFinal"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <br><br>
+            <button class="button" onclick="onClickFinalizar()" type="button">Finalizar Compra</button>
+            <br><br>
+            <button class="button" onclick="onClickLimpar()" type="submit">Limpar Carrinho</button>
+        </section>
+
+        <div id="modal">
+            <div>
+                <div id="loginCadastro">
+                    <h1>Entrar</h1>
+                    <br>
+                    <div>
+                        <button class="button" onclick="abrirLogin()" type="button">Já Tenho Conta</button>
+                        <br><br>
+                        <button class="button" onclick="abrirCadastro()" type="button">Criar Conta</button>
+                        <br><br>
+                        <button class="button" onclick="fecharModal()" type="button">Fechar</button>
+                    </div>
+                </div>
+                <div id="login">
+                    <h1>Acessar</h1>
+                    <br>
+                    <div>
+                        <form action="" id="acessarForm">
+                            <label for="acessarNome"></label>
+                            <input type="text" name="usuario" id="acessarNome" placeholder="Nome de Usuário">
+                            <br>
+                            <label for="acessarSenha"></label>
+                            <input type="password" name="senha" id="acessarSenha" placeholder="Senha">
+                            <br><br>
+                            <button class="button" type="submit">Entrar</button>
+                            <br><br>
+                            <button class="button" onclick="abrirLoginCadastro()" type="button">Voltar</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="cadastro">
+                    <h1>Cadastrar</h1>
+                    <br>
+                    <div>
+                        <form action="" id="cadastroForm">
+                            <label for="cadastrarNome"></label>
+                            <input type="text" name="nome" id="cadastrarNome" placeholder="Nome">
+                            <br>
+                            <label for="cadastrarEmail"></label>
+                            <input type="text" name="usuario" id="cadastrarEmail" placeholder="Usuário">
+                            <br>
+                            <label for="cadastrarSenha"></label>
+                            <input type="password" name="senha" id="cadastrarSenha" placeholder="Senha">
+                            <br>
+                            <label for="cadastrarConfirmarSenha"></label>
+                            <input type="password" name="confirmarSenha" id="cadastrarConfirmarSenha" placeholder="Confirmar Senha">
+                            <br>
+                            <label for="cadastrarRua"></label>
+                            <input type="text" name="rua" id="cadastrarRua" placeholder="Rua">
+                            <br>
+                            <label for="cadastrarNumero"></label>
+                            <input type="text" name="numero" id="cadastrarNumero" placeholder="Número da Residência">
+                            <br>
+                            <label for="cadastrarComplemento"></label>
+                            <input type="text" name="complemento" id="cadastrarComplemento" placeholder="Complemento">
+                            <br>
+                            <label for="cadastrarBairro"></label>
+                            <input type="text" name="bairro" id="cadastrarBairro" placeholder="Bairro">
+                            <br>
+                            <label for="cadastrarCidade"></label>
+                            <input type="text" name="cidade" id="cadastrarCidade" placeholder="Cidade">
+                            <br>
+                            <label for="cadastrarUf"></label>
+                            <input type="text" name="uf" id="cadastrarUf" placeholder="UF">
+                            <br>
+                            <label for="cadastrarCep"></label>
+                            <input type="text" name="cep" id="cadastrarCep" placeholder="CEP">
+                            <br><br>
+                            <button class="button" type="submit">Criar Conta</button>
+                            <br><br>
+                            <button class="button" onclick="abrirLoginCadastro()" type="button">Voltar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Anime Figures Store. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="./scripts/carrinho.js"></script>
+</html>
